@@ -3,6 +3,9 @@
 import { useState } from 'react';
 import { PaperAirplaneIcon, MagnifyingGlassIcon, PhotoIcon, DocumentIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
+import Link from 'next/link';
+import CodePreview from '../components/CodePreview';
+import PreviewPanel from '../components/PreviewPanel';
 
 export default function Chat() {
   const [message, setMessage] = useState('');
@@ -28,7 +31,7 @@ export default function Chat() {
       {/* Chat Header */}
       <div className="border-b border-gray-800 p-4">
         <div className="flex items-center justify-between max-w-[90rem] mx-auto">
-          <div className="flex items-center space-x-2">
+          <Link href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
             <Image
               src="/logo.svg"
               alt="clIck Logo"
@@ -37,7 +40,7 @@ export default function Chat() {
               priority
             />
             <h1 className="text-xl font-semibold">clIck</h1>
-          </div>
+          </Link>
         </div>
       </div>
 
@@ -120,21 +123,11 @@ export default function Chat() {
           <div className="flex-1 overflow-auto">
             {activeTab === 'code' ? (
               <div className="p-4">
-                <pre className="bg-gray-900 p-4 rounded-lg overflow-x-auto">
-                  <code className="text-sm text-gray-300">
-                    {/* Generated code will go here */}
-                    // Your generated code will appear here...
-                  </code>
-                </pre>
+                <CodePreview />
               </div>
             ) : (
               <div className="p-4">
-                <div className="bg-gray-900 p-4 rounded-lg h-full">
-                  {/* Preview iframe or component will go here */}
-                  <div className="text-gray-500 text-center">
-                    Preview will appear here...
-                  </div>
-                </div>
+                <PreviewPanel />
               </div>
             )}
           </div>
