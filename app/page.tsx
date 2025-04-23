@@ -89,7 +89,7 @@ export default async function Home() {
             As a plus, to bolster code generation, clIck employs Perplexity search for added support in code generation
             and debugging.
           </p>
-          <p className="mt-2 font-medium">So answer me this: why aren't you using click again?!?!</p>
+          <p className="mt-2 font-medium">So answer me this: why aren&apos;t you using click again?!?!</p>
         </div>
       ),
     },
@@ -106,7 +106,7 @@ export default async function Home() {
             IDEs like X-Code which has limited support and protected access to their software from Apple.
           </p>
           <p className="mt-2">
-            These are some of the issues we are facing but we are hard at work on it. If you'd like to support us as we
+            These are some of the issues we are facing but we are hard at work on it. If you&apos;d like to support us as we
             build or you are interested in problems like these, contact us!
           </p>
         </div>
