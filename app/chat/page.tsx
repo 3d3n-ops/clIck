@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import CodePreview from '../components/CodePreview';
 import PreviewPanel from '../components/PreviewPanel';
+import { MousePointer } from '@/components/mouse-pointer';
 
 export default function Chat() {
   const [message, setMessage] = useState('');
@@ -28,21 +29,36 @@ export default function Chat() {
 
   return (
     <div className="flex flex-col h-screen bg-black text-white">
-      {/* Chat Header */}
-      <div className="border-b border-gray-800 p-4">
-        <div className="flex items-center justify-between max-w-[90rem] mx-auto">
-          <Link href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
-            <Image
-              src="/logo.svg"
-              alt="clIck Logo"
-              width={32}
-              height={32}
-              priority
-            />
-            <h1 className="text-xl font-semibold">clIck</h1>
+      <header className="border-b border-gray-800/50 sticky top-0 z-50 backdrop-blur-md bg-black/80">
+        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+          <Link 
+            href="/" 
+            className="flex items-center gap-2 p-2 -m-2 hover:opacity-80 transition-opacity rounded-md hover:bg-gray-800/50"
+            aria-label="Return to home page"
+          >
+            <MousePointer className="h-6 w-6 text-white animate-float" />
+            <span className="ml-2 text-sm text-gray-400">clIck</span>
           </Link>
+          <nav className="flex items-center space-x-4">
+            <button
+              className={`px-3 py-1 rounded-md text-sm ${
+                activeTab === 'code' ? 'bg-gray-800 text-white' : 'text-gray-400 hover:text-white'
+              }`}
+              onClick={() => setActiveTab('code')}
+            >
+              Code
+            </button>
+            <button
+              className={`px-3 py-1 rounded-md text-sm ${
+                activeTab === 'preview' ? 'bg-gray-800 text-white' : 'text-gray-400 hover:text-white'
+              }`}
+              onClick={() => setActiveTab('preview')}
+            >
+              Preview
+            </button>
+          </nav>
         </div>
-      </div>
+      </header>
 
       {/* Main Content Area */}
       <div className="flex-1 flex">
