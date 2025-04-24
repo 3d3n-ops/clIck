@@ -205,13 +205,13 @@ export default async function Home() {
         </section>
 
         {/* Demo Video Section */}
-        <section className="py-12">
+        <SectionObserver id="demo" className="py-12">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <div className="relative aspect-video bg-gray-900 rounded-lg overflow-hidden">
+              <div className="relative aspect-video bg-gray-900 rounded-lg overflow-hidden transform transition-all duration-700 ease-out opacity-0 translate-y-8 group-data-[visible=true]:opacity-100 group-data-[visible=true]:translate-y-0">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center">
-                    <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-white/10 flex items-center justify-center">
+                    <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-white/10 flex items-center justify-center transform transition-all duration-700 ease-out scale-90 group-data-[visible=true]:scale-100">
                       <svg
                         className="w-8 h-8 text-white"
                         fill="currentColor"
@@ -220,14 +220,14 @@ export default async function Home() {
                         <path d="M8 5v14l11-7z" />
                       </svg>
                     </div>
-                    <p className="text-lg text-gray-400">Demo Video Coming Soon</p>
+                    <p className="text-lg text-gray-400 transform transition-all duration-700 ease-out translate-y-4 opacity-0 group-data-[visible=true]:translate-y-0 group-data-[visible=true]:opacity-100">Demo Video Coming Soon</p>
                   </div>
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
               </div>
             </div>
           </div>
-        </section>
+        </SectionObserver>
 
         {/* Features Section */}
         <SectionObserver id="features" className="py-20">

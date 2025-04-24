@@ -12,7 +12,7 @@ export default clerkMiddleware(async (auth, req) => {
 
   // For all other routes, require authentication
   if (!userId) {
-    return NextResponse.redirect(new URL("/sign-in", req.url));
+    return NextResponse.redirect(new URL("/", req.url));
   }
 
   return NextResponse.next();
