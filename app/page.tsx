@@ -204,6 +204,31 @@ export default async function Home() {
           </div>
         </section>
 
+        {/* Demo Video Section */}
+        <section className="py-12">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="relative aspect-video bg-gray-900 rounded-lg overflow-hidden">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-white/10 flex items-center justify-center">
+                      <svg
+                        className="w-8 h-8 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                    <p className="text-lg text-gray-400">Demo Video Coming Soon</p>
+                  </div>
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Features Section */}
         <SectionObserver id="features" className="py-20">
           <div className="container mx-auto px-4">
