@@ -1,3 +1,4 @@
+![ChatGPT Image Apr 24, 2025, 11_45_15 AM](https://github.com/user-attachments/assets/b1740e32-54ae-4b39-b2f2-9fee018e3e3f)
 # clIck - AI-Powered Cross-Platform Mobile App Development
 
 clIck is an intelligent code editor that simplifies and accelerates mobile app development through AI assistance. Build cross-platform mobile applications with natural language instructions and get instant previews of your code.
